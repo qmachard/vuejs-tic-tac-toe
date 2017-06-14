@@ -3,12 +3,15 @@
         <div id="details">
             <h1>Tic Tac Toe</h1>
         </div>
-        <grid></grid>
+        <Grid></Grid>
     </div>
 </template>
 
 <script>
+    import Grid from './components/Grid.vue'
+
     export default {
+        components: { Grid },
         name: 'app',
         data () {
             return {
@@ -72,9 +75,9 @@
         width: 100%;
         height: 15px;
         background-color: #16a085;
-        box-shadow: 10px solid #fff;
+        box-shadow: 10px 0 #fff;
         padding: 20px;
-        overflow-x: none;
+        overflow-x: hidden;
     }
 
     .scoreBoard h2 {

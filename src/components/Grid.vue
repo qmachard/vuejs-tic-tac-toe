@@ -1,25 +1,28 @@
 <template>
     <table class="grid">
         <tr>
-            <cell name="1"></cell>
-            <cell name="2"></cell>
-            <cell name="3"></cell>
+            <Cell name="1"></Cell>
+            <Cell name="2"></Cell>
+            <Cell name="3"></Cell>
         </tr>
         <tr>
-            <cell name="4"></cell>
-            <cell name="5"></cell>
+            <Cell name="4"></Cell>
+            <Cell name="5"></Cell>
             <cell name="6"></cell>
         </tr>
         <tr>
-            <cell name="7"></cell>
-            <cell name="8"></cell>
-            <cell name="9"></cell>
+            <Cell name="7"></Cell>
+            <Cell name="8"></Cell>
+            <Cell name="9"></Cell>
         </tr>
     </table>
 </template>
 
 <script>
+    import Cell from './Cell.vue';
+
     export default {
+        components: { Cell },
         data () {
             return {
                 // can be O or X
