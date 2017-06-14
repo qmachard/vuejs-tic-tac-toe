@@ -1,10 +1,5 @@
 <template>
     <div>
-        <div class="scoreBoard">
-            <span>O has {{ wins.O }} wins</span>
-            <h2>Score Board</h2>
-            <span>X has {{ wins.X }} wins</span>
-        </div>
         <div id="app">
             <div id="details">
                 <h1>Tic Tac Toe</h1>
@@ -12,6 +7,11 @@
             </div>
             <grid></grid>
             <button class="restart" @click="restart">Restart</button>
+        </div>
+        <div class="scoreBoard">
+            <h2>Score Board</h2>
+            <div><span>O</span> : {{ wins.O }}</div>
+            <div><span>X</span> : {{ wins.X }}</div>
         </div>
     </div>
 </template>
@@ -81,24 +81,32 @@
         cursor: pointer;
     }
     .scoreBoard {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        height: 15px;
-        background-color: #16a085;
+        width: 270px;
+        background-color: #EEEEEE;
+        border-radius: 10px;
         box-shadow: 10px 10px #fff;
-        padding: 20px;
         overflow-x: hidden;
+        margin: 10px auto 20px;
     }
     .scoreBoard h2 {
         margin: 0px;
+        background-color: #16a085;
+        padding: 10px;
     }
-    .scoreBoard span {
-        float: right;
+    .scoreBoard div {
+        box-sizing: border-box;
+        float: left;
+        width: 50%;
         font-size: 1.5em;
         font-weight: bold;
-        margin-left: 20px;
+        padding: 10px 20px;
+        color: #333;
+    }
+
+    .scoreBoard div span {
+        font-family: 'Gochi Hand', sans-serif;
+        font-size: 1.6em;
+        font-weight: bold;
+        color: #16a085;
     }
 </style>
