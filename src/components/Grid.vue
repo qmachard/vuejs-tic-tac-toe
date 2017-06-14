@@ -119,7 +119,7 @@
                     return 'draw'
                 }
                 // sets the status to turn
-                return 'turn'
+                return 'turn' + this.activePlayer;
             },
             // helper function for comparing cell values
             areEqual: function () {
